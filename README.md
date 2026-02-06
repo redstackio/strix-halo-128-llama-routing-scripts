@@ -1,7 +1,10 @@
+# Summary
 On the framework server (strix halo) with 128gb ram, in the BIOS configure only 512MB ram dedicated to iGPU.
 
-In the linux config edit /etc/default/grub and modify the "GRUB_CMDLINE_LINUX_DEFAULT" line to the following:
 
+# Grub Config
+In the linux config edit /etc/default/grub and modify the "GRUB_CMDLINE_LINUX_DEFAULT" line to the following:
+## Config
 ```
 CMDLINE_LINUX_DEFAULT="quiet splash amd_iommu=off amdgpu.gttsize=131072 ttm.pages_limit=33554432"
 ```
@@ -12,6 +15,13 @@ CMDLINE_LINUX_DEFAULT="quiet splash amd_iommu=off amdgpu.gttsize=131072 ttm.page
 
 ![amdgpu GTT size](Screenshot%20From%202026-02-05%2021-21-31.png)
 
+## Update Grub
+```
+# Debian
+sudo update-grub
+```
+
+# Lemonade SDK (ROCM Pre-Build Release)
 Download the latest release of lemonade-sdk with rocm built in (nightly/weekly):
 https://github.com/lemonade-sdk/llamacpp-rocm/releases
 
