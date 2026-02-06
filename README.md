@@ -10,7 +10,7 @@ CMDLINE_LINUX_DEFAULT="quiet splash amd_iommu=off amdgpu.gttsize=131072 ttm.page
 2. amdgpu.gttsize sets the Graphics Translation Table to 128GB (you may want to set this a little lower like 122/126gb depending on the linux os build and dedication of the server) - this value is a request.
 3. ttm.pages sets the Translation Table Manager to 128GB, this subsystem manages the memory for the GPU and limits what it can give to the kernel.
 
-![amdgpu GTT size](Screenshot From 2026-02-05 21-21-31.png)
+![amdgpu GTT size](Screenshot%20From%202026-02-05%2021-21-31.png)
 
 Download the latest release of lemonade-sdk with rocm built in (nightly/weekly):
 https://github.com/lemonade-sdk/llamacpp-rocm/releases
